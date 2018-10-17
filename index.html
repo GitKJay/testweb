@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)file:///Users/kevin/Desktop/Mydrafts/2/palyground.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>My playground</title>
+	
+	<link rel="stylesheet" href="./My playground_files/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+
+
+
+</head>
+<body>
+
+
+
+
+
+<div id="container" class="nav">
+
+	<ul>
+		<li>HEADER</li>
+		<li><a href="#Home">home</a></li>
+		<li><a href="#about">about</a></li>
+		<li><a href="#contact">contact</a></li>
+	</ul>
+
+</div>	
+
+	<div id="header-area" class="header-area" style="border:1px solid black;">
+		 <img style="height:100%; width:100%; margin:0px; padding:0px;" src="lamp.jpg">
+	</div>
+
+<center>
+<div class="button" id="btn1">
+	<button type="button" class="btn btn-primary">CLICK ME BITCH!</button>
+				<style type="text/css">
+					.btn{height:100px;
+						width:100px;
+						margin-top:10px;}
+					.btn:hover {background-color:blue;
+								color:white;}	
+
+				</style>
+
+
+				<div class="button" id="btn2">
+					<button type="button" class="btn btn-primary">HIHIHI!</button>
+				<style type="text/css">
+					.btn{height:100px;
+						width:100px;
+						margin-top:10px;}
+					.btn:hover {background-color:blue;
+								color:white;}	
+
+				</style>
+
+
+</div><!--button-->
+</center>
+
+
+<div class="container footer" id="footer">
+
+
+
+
+	
+</div><!--footer-->
+
+
+
+<!---NEW SESSION--->
+
+<div class="container container-B" id="container-2" style="margin-top:200px; margin-bottom:50px;">
+
+	<center>
+	
+	<div class="pindot1" id="pindot1" style="background-color:grey; color:black; width:100px; height:auto; text-align:center; font-size:auto;">
+		
+		<p1>button sample A</p1>
+
+	</div>
+
+
+	<div class="shapeRand" id="shapeRand">
+		<img class="shape" id="shape" src="shape_1.jpg">
+	</div>
+
+
+</div>
+
+
+
+
+
+	</center>
+
+
+
+
+
+<script type="text/javascript">
+
+var headerArea = document.getElementById('header-area');
+
+headerArea.onclick = function(){
+	var answer = prompt('Do you love me?');	
+	if (answer == 'i love you') {alert('i love you too');}
+		else{alert('pakyu')};
+}
+
+
+
+//
+
+var homeAction = document.getElementsByTagName('li');
+homeAction[1].onclick = function(){
+		alert('ayiiee you are my home 2');
+}
+
+
+// Syntax for addeventlister 
+// element.addEventListener('Event Type', Function Name, UseCapture)
+
+function about(){alert('what about me?')};
+
+homeAction[2].addEventListener('click',about,false);
+
+// another addeventListener
+
+function contactClick(){
+	var click1 = prompt('type first name');
+	var click2 = prompt('type last name');
+	var ans3 = click1 +' '+ click2;
+	alert(ans3)};
+
+homeAction[3].addEventListener('dblclick',contactClick,false);
+
+
+
+// button effect
+
+var buttonA = document.getElementsByClassName('btn')[0];
+
+
+function effectBtn(){
+	alert('You click me bitch!')
+};
+
+buttonA.addEventListener('click', effectBtn, false);
+
+
+// BUTTON EFFECT2
+
+var buttonB = document.getElementsByClassName('btn')[1];
+function  effectBtn2(){
+	var song1 = ['nanay tatay', 'gusto ko tinatpay', 'ate kuya gusto ko kape'];
+
+	song1.forEach(function(value,key){
+		alert(value,key);
+	});
+		
+	};
+
+
+buttonB.addEventListener('dblclick',effectBtn2,false);
+
+//loop
+
+
+var alphabet =['a','b','c','d'];
+
+alphabet.forEach(function(value,key){
+	console.log(value,key);
+});
+	
+
+while (alphabet < 10){
+	console.log(alphabet);
+	alphabet++;
+};
+
+//
+
+var syn1 = ['host1', 'host2', 'host3', 'host4'];
+var syn2 = [1, 2, 3, 4,];
+
+function combine1 (syn1,syn2){
+	return syn1 + syn2;
+}
+
+console.log(combine1);
+
+
+//new script
+	
+
+
+
+var pindotA = document.querySelector('.pindot1');
+
+pindotA.addEventListener('click', function(){
+
+	//set randomizer 
+	var randNum = Math.floor(Math.random() * 3) +1;
+
+	//set function action 
+
+	var shapeRand = document.querySelector('.shape');
+	shapeRand.style.display = 'block';
+	shapeRand.src = 'shape_' + randNum + 'jpg';
+	var newShape = shapeRand.src;
+
+
+}, false);
+
+
+
+
+	
+
+
+
+
+	
+</script>
+
+
+
+</body></html>
